@@ -9,7 +9,7 @@ public class SparkWebServer {
     public static void main(String... args){
         port(getPort());
         System.out.println(getPort());
-        get("hello", (req,res) -> "Hello hello!");
+        get("hello", (req,res) -> "Hello Spark!");
     }
 
     private static int getPort() {
