@@ -20,8 +20,16 @@ import java.util.Set;
 
 public class SecureURLReader {
 
-
-    public static void main(String[] args) throws Exception {
+    /**
+     * This method create the keys with the password for the certificates
+     * @throws KeyStoreException
+     * @throws IOException
+     * @throws NoSuchAlgorithmException
+     * @throws CertificateException
+     * @throws KeyManagementException
+     */
+    public static void createKey() throws KeyStoreException, IOException,
+            NoSuchAlgorithmException, CertificateException, KeyManagementException {
         // Create a file and a password representation
         File trustStoreFile = new File("keystores/ecikeystore.p12");
         char[] trustStorePassword = "12345678".toCharArray();
@@ -31,7 +39,6 @@ public class SecureURLReader {
         // Get the singleton instance of the TrustManagerFactory
         TrustManagerFactory tmf = TrustManagerFactory
                 .getInstance(TrustManagerFactory.getDefaultAlgorithm());
-
         // Itit the TrustManagerFactory using the truststore object
         tmf.init(trustStore);
         //Set the default global SSLContext so all the connections will use it
@@ -42,9 +49,14 @@ public class SecureURLReader {
         readURL("https://localhost:5000/hello");
         // This one can't be read because the Java default truststore has been
         // changed.
-        readURL("https://www.google.com");
+//        readURL("https://www.google.com");
     }
 
+    /**
+     * This method read an URL and show the response, if is not possible to connect will throws an error
+     * @param url
+     * @throws IOException
+     */
     private static void readURL(String url) throws IOException {
         try {
             URL siteURL = new URL(url);

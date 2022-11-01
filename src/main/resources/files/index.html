@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My first styled page</title>
+    <title>Login</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="js/apiclient.js"></script>
+    <script src="js/app.js"></script>
 </head>
 
 <body>
 
-<!-- Site navigation menu -->
-<ul class="navbar">
-    <li><a href="">Home page</a>
-    <li><a href="">Musings</a>
-    <li><a href="">My town</a>
-    <li><a href="">Links</a>
-</ul>
-
-<p id="string_name">Type a string:
-    <input id="string" placeholder="Insert a string" type="text">
+<p id="string_name">Login secure:
+    <input id="user" placeholder="username" type="text">
+    <input id="password" placeholder="password" type="password">
+    <button type="submit" onclick="app.login($('#user').val(),$('#password').val())"> Log in </button>
 </p>
+
+
 
 </body>
 </html>

@@ -44,18 +44,12 @@ Tenemos 3 clases `Control_access` que permite verificar que la contraseña que e
  
  ![image](https://user-images.githubusercontent.com/46855679/199156540-c31f392f-972c-47e9-bbbb-1b0167df0f22.png)
  
- Corremos el container y luego lo probaremos 
  
- ![image](https://user-images.githubusercontent.com/46855679/199157329-ff0cb986-108d-49a5-90ab-ef16295a625f.png)
 
-![image](https://user-images.githubusercontent.com/46855679/199157397-80c23aaa-9182-4d58-a296-b9406303803e.png)
 
- Por ultimo lo subiremos a nuestro repositorio, nos logearemos primero con `docker login` y enseguida lo subiremos.
- 
- ![image](https://user-images.githubusercontent.com/46855679/199158336-42dfad64-333b-41c6-bb93-a29344a7f1f5.png)
+![image](https://user-images.githubusercontent.com/46855679/198914086-88e62428-b132-4e03-bb5d-ccac3c241297.png)
 
- 
- 
+
 
 
 
